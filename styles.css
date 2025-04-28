@@ -1,0 +1,100 @@
+:root {
+    --bg-color-light: #f8f9fa;
+    --text-color-light: #212529;
+    --card-bg-light: #ffffff;
+    --card-text-color-light: #555;
+
+    --bg-color-dark: #121212;
+    --text-color-dark: #e0e0e0;
+    --card-bg-dark: #1e1e1e;
+    --card-text-color-dark: #bbb;
+}
+
+body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+#countriesContainer .card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--card-bg-light);
+    color: var(--card-text-color-light);
+    border: 1px solid #ddd;
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+body.dark-mode #countriesContainer .card {
+    background-color: var(--card-bg-dark);
+    color: var(--card-text-color-dark);
+    border-color: #333;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.1);
+}
+
+#countriesContainer .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+body.dark-mode .card-img-top {
+    border-color: #333;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: var(--card-text-color-light);
+}
+
+body.dark-mode .card-text {
+    color: var(--card-text-color-dark);
+}
+
+/* Pagination styles */
+.pagination .page-link {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+body.dark-mode .pagination .page-link {
+    background-color: transparent;
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .pagination .page-link:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Modal transition */
+.modal-content {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .modal-content {
+    background-color: var(--card-bg-dark);
+    color: var(--card-text-color-dark);
+}
